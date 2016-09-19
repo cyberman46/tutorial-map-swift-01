@@ -18,9 +18,14 @@ class ViewController: UIViewController {
         
         let latitude:CLLocationDegrees = 13.710826
         let lontitude:CLLocationDegrees = 100.498309
-        let latDelta:CLLocationDegrees = 0.07
-        let lonDelta:CLLocationDegrees = 0.07
+        let latDelta:CLLocationDegrees = 0.04
+        let lonDelta:CLLocationDegrees = 0.04
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+        
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: lontitude)
+        
+        let regit:MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+        map.setRegion(regit, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
