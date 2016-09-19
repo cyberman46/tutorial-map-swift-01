@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let latitude:CLLocationDegrees = 13.710826
+        let lontitude:CLLocationDegrees = 100.498309
+        let latDelta:CLLocationDegrees = 0.07
+        let lonDelta:CLLocationDegrees = 0.07
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
     }
 
     override func didReceiveMemoryWarning() {
